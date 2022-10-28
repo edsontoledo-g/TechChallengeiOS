@@ -22,11 +22,9 @@ class ContactUserViewController: UIViewController {
     func configure(with user: User) {
         self.user = user
         
-        DispatchQueue.global().async { [weak self] in
-            if let imageURL = URL(string: user.picture.large), let imageData = try? Data(contentsOf: imageURL), let image = UIImage(data: imageData) {
-                DispatchQueue.main.async {
-                    self?.userImageView.image = image
-                }
+        UIImage.loadImageAsync(stringURL: user.picture.large) { [weak self] image in
+            DispatchQueue.main.async {
+                self?.userImageView.image = image
             }
         }
     }

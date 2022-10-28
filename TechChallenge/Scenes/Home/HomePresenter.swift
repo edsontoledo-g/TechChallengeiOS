@@ -9,7 +9,7 @@ import UIKit
 
 protocol HomeViewDelegate: AnyObject {
     var currentUser: User? { get set }
-    func display(userImage: UIImage)
+    func display(userImage: UIImage?)
     func display(userName: String)
     func display(userAge: String)
     func display(userGender: String)
@@ -98,11 +98,9 @@ class HomePresenter {
         view?.display(userAge: "\(user.dob.age) years old")
         view?.display(userGender: user.gender)
         
-        DispatchQueue.global().async { [weak self] in
-            if let imageURL = URL(string: user.picture.large), let imageData = try? Data(contentsOf: imageURL), let image = UIImage(data: imageData) {
-                DispatchQueue.main.async {
-                    self?.view?.display(userImage: image)
-                }
+        UIImage.loadImageAsync(stringURL: user.picture.large) { [weak self] image in
+            DispatchQueue.main.async {
+                self?.view?.display(userImage: image)
             }
         }
     }

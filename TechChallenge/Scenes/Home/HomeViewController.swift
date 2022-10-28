@@ -71,7 +71,7 @@ extension HomeViewController: HomePresenterDelegate {
 
 // MARK: - HomeViewDelegate
 extension HomeViewController: HomeViewDelegate {
-    func display(userImage: UIImage) {
+    func display(userImage: UIImage?) {
         userImageView.image = userImage
     }
 

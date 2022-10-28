@@ -22,6 +22,7 @@
 		BC3FC45E290BE53100A0964B /* UserDetailViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC45B290BE53100A0964B /* UserDetailViewController+DataSource.swift */; };
 		BC3FC45F290BE53100A0964B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC45C290BE53100A0964B /* UserDetailViewController.swift */; };
 		BC3FC464290C006800A0964B /* ContactUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC463290C006800A0964B /* ContactUserViewController.swift */; };
+		BCBDAD8D290C03E200B1F005 /* UIImage+LoadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBDAD8C290C03E200B1F005 /* UIImage+LoadImageAsync.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BC3FC45B290BE53100A0964B /* UserDetailViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetailViewController+DataSource.swift"; sourceTree = "<group>"; };
 		BC3FC45C290BE53100A0964B /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		BC3FC463290C006800A0964B /* ContactUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUserViewController.swift; sourceTree = "<group>"; };
+		BCBDAD8C290C03E200B1F005 /* UIImage+LoadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+LoadImageAsync.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				BC3FC44A290BCFB700A0964B /* UIView+UIDesignables.swift */,
+				BCBDAD8C290C03E200B1F005 /* UIImage+LoadImageAsync.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				BC3FC439290BCF5A00A0964B /* HomeViewController.swift in Sources */,
 				BC3FC464290C006800A0964B /* ContactUserViewController.swift in Sources */,
 				BC3FC435290BCF5A00A0964B /* AppDelegate.swift in Sources */,
+				BCBDAD8D290C03E200B1F005 /* UIImage+LoadImageAsync.swift in Sources */,
 				BC3FC452290BE27B00A0964B /* User.swift in Sources */,
 				BC3FC437290BCF5A00A0964B /* SceneDelegate.swift in Sources */,
 				BC3FC453290BE27B00A0964B /* UserResponse.swift in Sources */,
