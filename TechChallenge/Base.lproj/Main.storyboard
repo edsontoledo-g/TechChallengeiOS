@@ -275,7 +275,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userImageView" destination="3Gc-vy-PfQ" id="GMW-bK-tUB"/>
+                        <outlet property="userImageView" destination="3Gc-vy-PfQ" id="G9O-z0-90R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fue-KN-7bX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

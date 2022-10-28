@@ -21,7 +21,7 @@
 		BC3FC45D290BE53100A0964B /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC45A290BE53100A0964B /* UserDetailPresenter.swift */; };
 		BC3FC45E290BE53100A0964B /* UserDetailViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC45B290BE53100A0964B /* UserDetailViewController+DataSource.swift */; };
 		BC3FC45F290BE53100A0964B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC45C290BE53100A0964B /* UserDetailViewController.swift */; };
-		BC3FC462290BF79300A0964B /* ContactUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC461290BF79300A0964B /* ContactUserViewController.swift */; };
+		BC3FC464290C006800A0964B /* ContactUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC463290C006800A0964B /* ContactUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		BC3FC45A290BE53100A0964B /* UserDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
 		BC3FC45B290BE53100A0964B /* UserDetailViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetailViewController+DataSource.swift"; sourceTree = "<group>"; };
 		BC3FC45C290BE53100A0964B /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
-		BC3FC461290BF79300A0964B /* ContactUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactUserViewController.swift; path = ../../../../../../Documents/ContactUserViewController.swift; sourceTree = "<group>"; };
+		BC3FC463290C006800A0964B /* ContactUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 		BC3FC460290BF75A00A0964B /* ContactUser */ = {
 			isa = PBXGroup;
 			children = (
-				BC3FC461290BF79300A0964B /* ContactUserViewController.swift */,
+				BC3FC463290C006800A0964B /* ContactUserViewController.swift */,
 			);
 			path = ContactUser;
 			sourceTree = "<group>";
@@ -232,8 +232,8 @@
 				BC3FC44B290BCFB700A0964B /* UIView+UIDesignables.swift in Sources */,
 				BC3FC45E290BE53100A0964B /* UserDetailViewController+DataSource.swift in Sources */,
 				BC3FC439290BCF5A00A0964B /* HomeViewController.swift in Sources */,
+				BC3FC464290C006800A0964B /* ContactUserViewController.swift in Sources */,
 				BC3FC435290BCF5A00A0964B /* AppDelegate.swift in Sources */,
-				BC3FC462290BF79300A0964B /* ContactUserViewController.swift in Sources */,
 				BC3FC452290BE27B00A0964B /* User.swift in Sources */,
 				BC3FC437290BCF5A00A0964B /* SceneDelegate.swift in Sources */,
 				BC3FC453290BE27B00A0964B /* UserResponse.swift in Sources */,
