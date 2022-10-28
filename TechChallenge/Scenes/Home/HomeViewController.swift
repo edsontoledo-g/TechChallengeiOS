@@ -35,7 +35,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didPressShowUserButton(_ sender: UIButton) {
+        guard let user = currentUser else {
+            return
+        }
         
+        presenter.showUserButtonPressed(user: user)
     }
     
     private func clearUIData() {
@@ -49,8 +53,19 @@ class HomeViewController: UIViewController {
 // MARK: - HomePresenterDelegate
 extension HomeViewController: HomePresenterDelegate {
     func showUserDetails(user: User) {
-        // More code to come.
-        // Present the DetailViewController.
+        guard let vc = storyboard?.instantiateViewController(identifier: "UserDetailViewController") as? UserDetailViewController else {
+            return
+        }
+        
+        vc.configure(with: user)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showAlert(title: String, message: String?) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default))
+        
+        present(ac, animated: true)
     }
 }
 

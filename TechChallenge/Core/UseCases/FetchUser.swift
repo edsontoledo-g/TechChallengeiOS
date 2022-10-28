@@ -18,6 +18,9 @@ class FetchUserUseCase {
         case noUserFound
     }
     
+    /// This function makes a request to the API and receives a clousure with a result.
+    /// If the result is successful, we get an user.
+    /// Otherwise, we get a custom error telling us exaclty what was the problem.
     func fetchUser(completion: @escaping (Result<User, FetchUserUseCaseError>) -> Void) {
         guard let url = URL(string: Self.endpoint) else {
             completion(.failure(.badURL))
@@ -28,7 +31,6 @@ class FetchUserUseCase {
         URLSession.shared.dataTask(with: urlRequest) { data, _, error in
             guard let data = data, error == nil else {
                 return completion(.failure(.badRequest))
-                
             }
             
             let decoder = JSONDecoder()
