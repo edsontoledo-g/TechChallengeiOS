@@ -20,17 +20,11 @@ struct User: Decodable {
         var state: String
         var country: String
         var postcode: Int
-        var coordinates: Coordinates
     }
     
     struct Street: Decodable {
         var number: Int
         var name: String
-    }
-    
-    struct Coordinates: Decodable {
-        var latitude: String
-        var longitude: String
     }
     
     struct Birth: Decodable {

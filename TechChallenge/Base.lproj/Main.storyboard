@@ -236,6 +236,52 @@
             </objects>
             <point key="canvasLocation" x="2232" y="0.0"/>
         </scene>
+        <!--Contact User View Controller-->
+        <scene sceneID="Jtp-fr-T4v">
+            <objects>
+                <viewController storyboardIdentifier="ContactUserViewController" id="6wq-Gz-Fxd" customClass="ContactUserViewController" customModule="TechChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZ9-vO-7jD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Gc-vy-PfQ">
+                                <rect key="frame" x="75" y="302" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Hfp-zF-WH9"/>
+                                    <constraint firstAttribute="width" constant="240" id="U2w-Lh-BtE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.and.waveform.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J1n-1r-GPv">
+                                <rect key="frame" x="163" y="570.66666666666663" width="64" height="62.333333333333371"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Y24-b5-2Z7"/>
+                                    <constraint firstAttribute="width" constant="64" id="r02-h0-dV7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="caN-ch-aCB"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="3Gc-vy-PfQ" firstAttribute="centerX" secondItem="yZ9-vO-7jD" secondAttribute="centerX" id="0ec-SC-Lp6"/>
+                            <constraint firstItem="J1n-1r-GPv" firstAttribute="centerX" secondItem="yZ9-vO-7jD" secondAttribute="centerX" id="4xP-6c-ZFX"/>
+                            <constraint firstItem="3Gc-vy-PfQ" firstAttribute="centerY" secondItem="yZ9-vO-7jD" secondAttribute="centerY" id="GCo-0H-253"/>
+                            <constraint firstItem="J1n-1r-GPv" firstAttribute="top" secondItem="3Gc-vy-PfQ" secondAttribute="bottom" constant="28" id="PCU-CH-kWP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userImageView" destination="3Gc-vy-PfQ" id="GMW-bK-tUB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fue-KN-7bX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3175.3846153846152" y="0.0"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hn8-4L-ilt">
             <objects>
@@ -257,6 +303,7 @@
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="phone.and.waveform.fill" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

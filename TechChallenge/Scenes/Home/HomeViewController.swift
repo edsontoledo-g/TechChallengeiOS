@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
 // MARK: - HomePresenterDelegate
 extension HomeViewController: HomePresenterDelegate {
     func showUserDetails(user: User) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "UserDetailViewController") as? UserDetailViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: UserDetailViewController.storyboardIdentifier) as? UserDetailViewController else {
             return
         }
         

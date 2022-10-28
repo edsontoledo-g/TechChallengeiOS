@@ -8,6 +8,8 @@
 import UIKit
 
 class UserDetailViewController: UICollectionViewController {
+    static let storyboardIdentifier = "UserDetailViewController"
+    
     private let presenter = UserDetailPresenter()
     
     var user: User?
@@ -18,6 +20,7 @@ class UserDetailViewController: UICollectionViewController {
         
         title = "Details"
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "phone"), style: .plain, target: self, action: #selector(didPressContactUserButton))
         
         collectionView.collectionViewLayout = listLayout()
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
@@ -30,13 +33,17 @@ class UserDetailViewController: UICollectionViewController {
         presenter.view = self
     }
     
-    func listLayout() -> UICollectionViewCompositionalLayout {
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    private func listLayout() -> UICollectionViewCompositionalLayout {
         let listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
     
-    func createSnapshot() {
+    private func createSnapshot() {
         var snapshot = Snapshot()
         snapshot.appendSections([0])
         
@@ -59,14 +66,31 @@ class UserDetailViewController: UICollectionViewController {
     func configure(with user: User) {
         self.user = user
     }
-}
-
-extension UserDetailViewController: UserDetailDelegate {
     
+    @objc
+    func didPressContactUserButton() {
+        presenter.contactUserButtonPressed(user: user)
+    }
 }
 
+// MARK: - UserDetailDelegate
+extension UserDetailViewController: UserDetailDelegate {
+    func showUserContactView(user: User) {
+        guard let vc = storyboard?.instantiateViewController(identifier: ContactUserViewController.storyboardIdentifier) as? ContactUserViewController else {
+            return
+        }
+        
+        vc.configure(with: user)
+        if let sheet = vc.sheetPresentationController {
+                sheet.detents = [.large()]
+        }
+        
+        present(vc, animated: true, completion: nil)
+    }
+}
+
+// MARK: - UserDetailView
 extension UserDetailViewController: UserDetailView {
     
 }
-
 
