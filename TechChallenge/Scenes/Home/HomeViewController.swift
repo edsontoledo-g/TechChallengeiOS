@@ -19,18 +19,15 @@ class HomeViewController: UIViewController {
     
     var currentUser: User?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        clearUIData()
-        
+
         presenter.delegate = self
         presenter.view = self
         presenter.viewDidLoad()
     }
 
-    @IBAction func didPressNextButton(_ sender: UIButton) {
+    @IBAction func didPressNextUserButton(_ sender: UIButton) {
         presenter.nextUserButtonPressed()
     }
     
@@ -40,13 +37,6 @@ class HomeViewController: UIViewController {
         }
         
         presenter.showUserButtonPressed(user: user)
-    }
-    
-    private func clearUIData() {
-        userNameLabel.text = ""
-        userAgeLabel.text = ""
-        userGenderLabel.text = ""
-        userCityLabel.text = ""
     }
 }
 

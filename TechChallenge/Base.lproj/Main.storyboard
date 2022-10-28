@@ -138,7 +138,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="didPressNextButton:" destination="2ZK-D9-MgS" eventType="touchUpInside" id="lYP-Af-g6I"/>
+                                    <action selector="didPressNextUserButton:" destination="2ZK-D9-MgS" eventType="touchUpInside" id="c6r-CA-G6K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGj-7R-6k1" userLabel="Show User Button">

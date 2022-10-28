@@ -29,6 +29,9 @@ class HomePresenter {
     
     /// This function is triggered when the HomeViewController triggers the viewDidLoad() function.
     func viewDidLoad() {
+        // Clean the UI.
+        self.cleanView()
+        
         // Make request to the API.
         FetchUserUseCase.shared.fetchUser { [weak self] result in
             switch result {
@@ -56,12 +59,15 @@ class HomePresenter {
     /// This function is triggered when the user taps the "next user" button.
     func nextUserButtonPressed() {
         // The code is very similar to the viewDidLoad() function but slightly different.
-        // Disappears the card until we get a new user. We could implement a custom transition and
-        // animations between each card.
-        DispatchQueue.main.async { [weak self] in
-            self?.delegate?.view.subviews.first?.alpha = 0.0
-        }
+        // Disappears the card until we get a new user with an animation.
+        let animationDuration: TimeInterval = 0.5
         
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveLinear) {
+                self?.delegate?.view.subviews.first?.alpha = 0.0
+            }
+        }
+            
         FetchUserUseCase.shared.fetchUser { [weak self] result in
             switch result {
             case .success(let user):
@@ -80,7 +86,9 @@ class HomePresenter {
             }
             
             DispatchQueue.main.async { [weak self] in
-                self?.delegate?.view.subviews.first?.alpha = 1.0
+                UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveLinear) {
+                    self?.delegate?.view.subviews.first?.alpha = 1.0
+                }
             }
         }
     }
@@ -91,7 +99,7 @@ class HomePresenter {
     }
     
     /// This function is triggered each time we get another user.
-    func refreshView(with user: User) {
+    private func refreshView(with user: User) {
         view?.currentUser = user
         view?.display(userName: "\(user.name.first) \(user.name.last)")
         view?.display(userCity: user.location.city)
@@ -103,5 +111,14 @@ class HomePresenter {
                 self?.view?.display(userImage: image)
             }
         }
+    }
+    
+    /// This function is triggered when the view loads to clean the UI.
+    private func cleanView() {
+        view?.display(userName: "")
+        view?.display(userCity: "")
+        view?.display(userAge: "")
+        view?.display(userGender: "")
+        view?.display(userImage: nil)
     }
 }

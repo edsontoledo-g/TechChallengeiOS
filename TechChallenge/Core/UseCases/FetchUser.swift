@@ -36,12 +36,10 @@ class FetchUserUseCase {
             let decoder = JSONDecoder()
             guard let response = try? decoder.decode(UserResponse.self, from: data) else {
                 return completion(.failure(.JSONDecodeError))
-                
             }
             
             guard let user = response.results.first else {
                 return completion(.failure(.noUserFound))
-                
             }
             
             completion(.success(user))
