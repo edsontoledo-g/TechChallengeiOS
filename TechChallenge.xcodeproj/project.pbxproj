@@ -14,6 +14,10 @@
 		BC3FC43E290BCF5C00A0964B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3FC43D290BCF5C00A0964B /* Assets.xcassets */; };
 		BC3FC441290BCF5C00A0964B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3FC43F290BCF5C00A0964B /* LaunchScreen.storyboard */; };
 		BC3FC44B290BCFB700A0964B /* UIView+UIDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC44A290BCFB700A0964B /* UIView+UIDesignables.swift */; };
+		BC3FC452290BE27B00A0964B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC450290BE27A00A0964B /* User.swift */; };
+		BC3FC453290BE27B00A0964B /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC451290BE27A00A0964B /* UserResponse.swift */; };
+		BC3FC456290BE29800A0964B /* FetchUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC455290BE29800A0964B /* FetchUser.swift */; };
+		BC3FC458290BE2C300A0964B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FC457290BE2C300A0964B /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		BC3FC440290BCF5C00A0964B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC3FC442290BCF5C00A0964B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC3FC44A290BCFB700A0964B /* UIView+UIDesignables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIDesignables.swift"; sourceTree = "<group>"; };
+		BC3FC450290BE27A00A0964B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC3FC451290BE27A00A0964B /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		BC3FC455290BE29800A0964B /* FetchUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchUser.swift; sourceTree = "<group>"; };
+		BC3FC457290BE2C300A0964B /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			children = (
 				BC3FC434290BCF5A00A0964B /* AppDelegate.swift */,
 				BC3FC436290BCF5A00A0964B /* SceneDelegate.swift */,
+				BC3FC44E290BE25300A0964B /* Core */,
 				BC3FC44C290BD00900A0964B /* Scenes */,
 				BC3FC448290BCF7D00A0964B /* Extensions */,
 				BC3FC43A290BCF5A00A0964B /* Main.storyboard */,
@@ -90,8 +99,35 @@
 			isa = PBXGroup;
 			children = (
 				BC3FC438290BCF5A00A0964B /* HomeViewController.swift */,
+				BC3FC457290BE2C300A0964B /* HomePresenter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		BC3FC44E290BE25300A0964B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BC3FC454290BE28900A0964B /* UseCases */,
+				BC3FC44F290BE26100A0964B /* Entities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BC3FC44F290BE26100A0964B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BC3FC450290BE27A00A0964B /* User.swift */,
+				BC3FC451290BE27A00A0964B /* UserResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BC3FC454290BE28900A0964B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BC3FC455290BE29800A0964B /* FetchUser.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +204,11 @@
 				BC3FC44B290BCFB700A0964B /* UIView+UIDesignables.swift in Sources */,
 				BC3FC439290BCF5A00A0964B /* HomeViewController.swift in Sources */,
 				BC3FC435290BCF5A00A0964B /* AppDelegate.swift in Sources */,
+				BC3FC452290BE27B00A0964B /* User.swift in Sources */,
 				BC3FC437290BCF5A00A0964B /* SceneDelegate.swift in Sources */,
+				BC3FC453290BE27B00A0964B /* UserResponse.swift in Sources */,
+				BC3FC456290BE29800A0964B /* FetchUser.swift in Sources */,
+				BC3FC458290BE2C300A0964B /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
